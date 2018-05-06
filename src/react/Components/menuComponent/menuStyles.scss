@@ -1,0 +1,108 @@
+@import "~@material/animation/functions";
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url("../../../fonts/11528.ttf") format('truetype');
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sidePanelBack {
+  animation: mdc-animation-enter(/* $name: */
+                  fade-left, /* $duration: */
+                  1000ms);
+  width: 200px;
+  height: 100vh;
+  background-color: #282E33;
+  position: absolute;
+  z-index: -1;
+}
+
+.sidePanel {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  z-index: 1;
+
+  .profile {
+    height: 70px;
+    background-color: #009687;
+    animation: mdc-animation-enter(/* $name: */
+                    fade-in, /* $duration: */
+                    1050ms);
+    .imgProfile {
+      width: 70px;
+      border-radius: 40px;
+    }
+  }
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 32px 0 0 0;
+    .a {
+      text-decoration: none !important;
+      .itemOfMenu {
+        animation: mdc-animation-enter(/* $name: */
+                        fade-in, /* $duration: */
+                        1050ms);
+        padding: 10px 0 42px 22px;
+        height: 30px;
+        color: white;
+        font-size: 15px;
+        font-family: "Century Gothic", serif;
+        .strong {
+          margin: 5px 0 0 11px;
+          position: absolute;
+          font-weight: 100;
+        }
+        .img {
+          width: 29px;
+        }
+        &:hover {
+          background-color: rgba(87, 87, 87, 0.65);
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+  .aboute {
+    animation: mdc-animation-enter(/* $name: */
+                    fade-left, /* $duration: */
+                    1050ms);
+    bottom: 20px;
+    position: absolute;
+    .abouteString {
+      color: #fff;
+      font-weight: 100;
+      font-size: 11px;
+      font-family: "Century Gothic", serif;
+      margin-left: 18px;
+    }
+  }
+}
+
+
+
