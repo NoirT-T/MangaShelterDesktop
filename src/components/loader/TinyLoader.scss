@@ -1,28 +1,21 @@
 .tiny-loader {
-  display: block;
   height: 32px;
   width: 32px;
   &__animation {
-    display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     margin: auto;
     height: 32px;
     width: 32px;
     &::before {
       content: "";
-      display: block;
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
       margin: auto;
-      height: 32px;
-      width: 32px;
+      height: 100%;
+      width: 100%;
       border: 3px solid #000000;
       border-bottom: 3px solid transparent;
       border-radius: 50%;
@@ -32,11 +25,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin-left: 15px;
+      margin-left: 16px;
       margin-top: 13px;
       width: 6px;
       height: 6px;
